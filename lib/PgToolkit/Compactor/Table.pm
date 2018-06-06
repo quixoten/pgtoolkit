@@ -2104,7 +2104,7 @@ sub _get_set_local_statement_timeout_query {
 	my ($self, %arg_hash) = @_;
 
 	return
-		'SET LOCAL statement_timeout TO '.$self->{'_locked_alter_timeout'}.';';
+  		'SET LOCAL statement_timeout TO '.$self->{'_locked_alter_timeout'}.';'.'SET LOCAL lock_timeout TO '.$self->{'_locked_alter_timeout'}.';';
 }
 
 sub _set_local_statement_timeout {
