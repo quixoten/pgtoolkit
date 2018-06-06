@@ -135,7 +135,7 @@ sub get_table_compactor {
 		pages_before_vacuum_lower_threshold => 1000,
 		pages_before_vacuum_upper_divisor => 50,
 		max_retry_count => $options->get(name => 'max-retry-count'),
-		locked_alter_timeout => 1000,
+		locked_alter_timeout => 21600,
 		locked_alter_count => 3600);
 }
 
